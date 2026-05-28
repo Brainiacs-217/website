@@ -5,12 +5,14 @@ import gsap from "gsap";
 import { useCallback, useLayoutEffect, useRef } from "react";
 import { portalLinks, isExternalHref } from "@/lib/portalLinks";
 
-/** After the intro video: title fades in, then each circle one-by-one (opacity only) */
+/** After the intro video: title slides up, then each circle one-by-one (opacity only) */
 const portalPostVideoFade = {
-  ease: "power2.out" as const,
+  titleEase: "power3.out" as const,
+  circleEase: "power2.out" as const,
   titleDuration: 1,
+  /** Start slightly below; animates to y:0 (slide up) */
+  titleSlideY: 40,
   circleDuration: 0.35,
-  /** Pause after title before the first circle */
   gapAfterTitle: 0.15,
 } as const;
 
@@ -83,7 +85,7 @@ export function PortalEntry() {
   useLayoutEffect(() => {
     const h1 = titleRef.current;
     const row = circlesRowRef.current;
-    if (h1) gsap.set(h1, { opacity: 0 });
+    if (h1) gsap.set(h1, { opacity: 0, y: portalPostVideoFade.titleSlideY });
     if (row) gsap.set(row.children, { opacity: 0 });
   }, []);
 
@@ -102,15 +104,16 @@ export function PortalEntry() {
     const tl = gsap.timeline();
     tl.to(h1, {
       opacity: 1,
+      y: 0,
       duration: portalPostVideoFade.titleDuration,
-      ease: portalPostVideoFade.ease,
+      ease: portalPostVideoFade.titleEase,
     });
     tl.to(
       row.children,
       {
         opacity: 1,
         duration: portalPostVideoFade.circleDuration,
-        ease: portalPostVideoFade.ease,
+        ease: portalPostVideoFade.circleEase,
         // Next circle starts when the previous fade finishes
         stagger: portalPostVideoFade.circleDuration,
       },
@@ -146,7 +149,7 @@ export function PortalEntry() {
         >
           <SideCircle
             href={portalLinks.left}
-            text="Interested in investing in the future of food"
+            text="Interested in investing in the future of food?"
           />
 
           <Link
