@@ -8,7 +8,7 @@ export function Footer() {
           <br />
           More time on what matters.
         </h2>
-        <button className="bg-white text-black text-base font-semibold px-9 py-4 rounded-full">
+        <button className="bg-background text-black text-base font-semibold px-9 py-4 rounded-full">
           Contact us
         </button>
       </div>

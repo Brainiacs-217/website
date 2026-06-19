@@ -29,7 +29,7 @@ export function ContactForm() {
             type="text"
             placeholder="Your name"
             required
-            className="w-full border border-[#d4d4d5] rounded-xl px-4 py-3 text-sm text-[#1a1a2e] placeholder:text-[#d4d4d5] outline-none focus:ring-2 focus:ring-[#1a1a2e]/20 transition"
+            className="w-full border border-[#d4d4d5] rounded-xl bg-background px-4 py-3 text-sm text-[#1a1a2e] placeholder:text-[#d4d4d5] outline-none focus:ring-2 focus:ring-[#1a1a2e]/20 transition"
           />
         </div>
 
@@ -41,7 +41,7 @@ export function ContactForm() {
             type="email"
             placeholder="you@company.com"
             required
-            className="w-full border border-[#d4d4d5] rounded-xl px-4 py-3 text-sm text-[#1a1a2e] placeholder:text-[#d4d4d5] outline-none focus:ring-2 focus:ring-[#1a1a2e]/20 transition"
+            className="w-full border border-[#d4d4d5] rounded-xl bg-background px-4 py-3 text-sm text-[#1a1a2e] placeholder:text-[#d4d4d5] outline-none focus:ring-2 focus:ring-[#1a1a2e]/20 transition"
           />
         </div>
 
@@ -52,7 +52,7 @@ export function ContactForm() {
           <input
             type="tel"
             placeholder="(optional)"
-            className="w-full border border-[#d4d4d5] rounded-xl px-4 py-3 text-sm text-[#1a1a2e] placeholder:text-[#d4d4d5] outline-none focus:ring-2 focus:ring-[#1a1a2e]/20 transition"
+            className="w-full border border-[#d4d4d5] rounded-xl bg-background px-4 py-3 text-sm text-[#1a1a2e] placeholder:text-[#d4d4d5] outline-none focus:ring-2 focus:ring-[#1a1a2e]/20 transition"
           />
         </div>
 
@@ -63,7 +63,7 @@ export function ContactForm() {
           <textarea
             placeholder="What tasks are you looking to automate?"
             rows={5}
-            className="w-full border border-[#d4d4d5] rounded-xl px-4 py-3 text-sm text-[#1a1a2e] placeholder:text-[#d4d4d5] outline-none focus:ring-2 focus:ring-[#1a1a2e]/20 transition resize-none"
+            className="w-full border border-[#d4d4d5] rounded-xl bg-background px-4 py-3 text-sm text-[#1a1a2e] placeholder:text-[#d4d4d5] outline-none focus:ring-2 focus:ring-[#1a1a2e]/20 transition resize-none"
           />
         </div>
 

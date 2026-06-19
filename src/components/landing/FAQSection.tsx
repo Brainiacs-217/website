@@ -62,7 +62,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export function FAQSection() {
   return (
-    <section className="bg-white px-[160px] py-[120px] mb-11">
+    <section className="bg-background px-[160px] py-[120px] mb-11">
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.7fr] gap-x-6 gap-y-12">
         <FadeIn>
           <h2 className="text-[#1a1a2e] text-[36px] font-semibold leading-tight tracking-tight">

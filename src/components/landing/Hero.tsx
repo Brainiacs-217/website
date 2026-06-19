@@ -1,24 +1,66 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative h-screen min-h-[720px] w-full overflow-hidden">
-      <Image
-        src="/burgerbotthumbnail.jpg"
-        alt="BurgerBots robot arm assembling a burger"
-        fill
-        className="object-cover"
-        priority
-      />
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="relative z-10 flex flex-col items-center justify-center h-full gap-7 px-[160px]">
-        <h1 className="text-white text-[96px] font-semibold text-center leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
-          BURGERBOTS<span className="text-[40px] align-super">©</span>
-        </h1>
-        <p className="text-[#d4d4d5] text-[24px] text-center font-medium">
-          Robots handle repetition. People handle what matters.
-        </p>
+    <section className="relative flex min-h-svh w-full items-center overflow-hidden bg-bg-hero">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-1/2 -right-32 hidden h-[min(115vh,1000px)] w-[min(80vw,860px)] -translate-y-1/2 opacity-[0.09] mix-blend-multiply select-none md:block lg:-right-24 xl:-right-16"
+      >
+        <Image
+          src="/robot-schematic.png"
+          alt=""
+          fill
+          sizes="(min-width: 768px) 80vw"
+          className="object-contain object-center"
+          priority
+        />
       </div>
+
+      <div className="relative z-10 flex w-full flex-col items-start gap-8 px-6 py-24 md:px-10 lg:px-16 xl:px-[80px]">
+        <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-text-secondary">
+          Los Gatos, CA · Open Tues–Sun
+        </p>
+
+        <h1 className="font-(family-name:--font-space-grotesk) text-[clamp(3rem,5.5vw,5.25rem)] font-bold leading-[0.9] tracking-tight">
+          <span className="block text-black">Made by robots.</span>
+          <span className="block text-accent">Loved by humans.</span>
+        </h1>
+
+        <p className="max-w-md text-lg leading-relaxed text-text-secondary">
+          B.O.B. grinds, grills, and garnishes every burger from scratch. Our
+          humans bring it to your table.
+        </p>
+
+        <div className="flex flex-wrap items-center gap-3">
+          <Link
+            href="/contact"
+            className="inline-flex items-center bg-accent px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+          >
+            Book a Table →
+          </Link>
+          <Link
+            href="/buy"
+            className="inline-flex items-center border border-black px-8 py-4 text-sm font-semibold text-black transition-colors hover:bg-black hover:text-white"
+          >
+            Own a BurgerBot
+          </Link>
+          <Link
+            href="/investors"
+            className="inline-flex items-center border border-black px-8 py-4 text-sm font-semibold text-black transition-colors hover:bg-black hover:text-white"
+          >
+            Investor Material
+          </Link>
+        </div>
+      </div>
+
+      <p
+        aria-hidden
+        className="pointer-events-none absolute bottom-6 right-0 text-[11px] font-medium uppercase tracking-[0.25em] text-text-secondary md:right-2 lg:right-4 xl:right-[32px]"
+      >
+        Industry robots · Simply deployed
+      </p>
     </section>
   );
 }

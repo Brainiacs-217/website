@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 
 export function ContentSection() {
   return (
-    <section className="flex flex-col bg-white">
+    <section className="flex flex-col bg-background">
       <div className="flex flex-col items-center gap-12 px-[160px] pt-[120px] pb-[80px]">
         <FadeIn>
           <h2 className="text-[#1a1a2e] text-[42px] font-semibold text-center">
