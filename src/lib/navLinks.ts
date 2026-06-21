@@ -1,7 +1,7 @@
 export const navLinks = [
   { href: "/home", label: "Home" },
-  { href: "/buy", label: "Buy a BurgerBot" },
-  { href: "/investors", label: "Investors" },
+  { href: "/buy", label: "Own a BurgerBot" },
+  { href: "/investors", label: "Investor Material" },
 ] as const;
 
 export const lightPages = new Set(["/home", "/buy", "/investors"]);

@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Investors | BURGERBOTS",
+  title: "Investor Material | BURGERBOTS",
   description:
     "BurgerBots investor overview — on-device kitchen robotics, demonstration-based learning, and scalable commercial deployment.",
 };

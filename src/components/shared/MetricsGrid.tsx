@@ -30,7 +30,7 @@ export function MetricsGrid(props: MetricsGridProps) {
     const productMetrics = metrics as ProductMetric[];
     return (
       <section className={sectionClass}>
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {productMetrics.map((stat, i) => (
             <FadeIn key={stat.unit} delay={i * 0.08}>
               <div className="flex flex-col gap-2">

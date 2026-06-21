@@ -11,15 +11,19 @@ export function VisitSection() {
   return (
     <section
       id="visit"
-      className="page-x border-t border-dashed border-text-primary/10 bg-surface-muted py-[calc(var(--spacing-section-md)+0.375in)] scroll-mt-20"
+      className="page-x border-t border-dashed border-text-primary/10 bg-surface-muted py-[calc(var(--spacing-section-md)+0.45in)] scroll-mt-20"
     >
-      <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
-        <FadeIn>
-          <PixelFrame label="Breaking Dawn · Los Gatos">
-            <div className="relative aspect-[5/4] w-full md:aspect-[6/5]">
+      <div className="mx-auto grid max-w-5xl grid-cols-1 items-start gap-12 md:grid-cols-2 md:items-stretch md:gap-16">
+        <FadeIn className="md:h-full">
+          <PixelFrame
+            label="Breaking Dawn · Los Gatos"
+            labelPosition="overlay"
+            className="md:h-full"
+          >
+            <div className="relative aspect-[5/4] w-full md:aspect-auto md:h-full">
               <Image
                 src={restaurant.visitImage}
-                alt="Burgers at Breaking Dawn"
+                alt="Breaking Dawn restaurant interior in Los Gatos"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"

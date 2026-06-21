@@ -12,6 +12,6 @@ export const siteConfig = {
     hours: "Open Tues–Sun",
     mapUrl:
       "https://maps.google.com/?q=160+W+Main+St,+Los+Gatos,+CA+95030",
-    visitImage: "/contact.png",
+    visitImage: "/assets/breaking-dawn.png",
   },
 };
