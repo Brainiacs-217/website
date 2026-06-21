@@ -36,7 +36,7 @@ export function Hero() {
         <div className="flex flex-wrap items-center gap-3">
           <Link
             href="/contact"
-            className="inline-flex items-center bg-accent px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+            className="inline-flex items-center bg-accent px-8 py-4 text-sm font-semibold text-black transition-colors hover:bg-accent-hover"
           >
             Book a Table →
           </Link>
@@ -55,11 +55,13 @@ export function Hero() {
         </div>
       </div>
 
-      <p
-        aria-hidden
-        className="pointer-events-none absolute bottom-6 right-0 text-[11px] font-medium uppercase tracking-[0.25em] text-text-secondary md:right-2 lg:right-4 xl:right-[32px]"
-      >
-        Industry robots · Simply deployed
+      <p className="absolute bottom-6 right-0 text-right text-[13px] font-medium uppercase tracking-[0.25em] text-text-secondary md:right-2 lg:right-4 xl:right-[32px]">
+        <span className="block cursor-default underline-offset-[0.2em] transition-[text-decoration] hover:underline">
+          Breaking Dawn
+        </span>
+        <span className="block cursor-default underline-offset-[0.2em] transition-[text-decoration] hover:underline">
+          160 W Main St, 95030
+        </span>
       </p>
     </section>
   );

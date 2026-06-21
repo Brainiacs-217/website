@@ -1,6 +1,4 @@
 @import "tailwindcss";
-/* Required with Lenis: restores html/body height so scrollHeight reflects real content */
-@import "lenis/dist/lenis.css";
 
 @theme inline {
   --color-background: #faf7f5;
@@ -13,16 +11,13 @@
   --color-bg-dark: #000000;
   --color-bg-surface: #f0ebe8;
   --color-bg-hero: #faf7f5;
-  --color-accent: #b8963e;
-  --color-accent-hover: #9a7830;
+  --color-accent: #efb73e;
+  --color-accent-hover: #d4a030;
   --color-border-default: #d4d4d5;
 }
 
 html,
 body {
-  /* min-height lets the document grow with content; fixed height:100% can pin
-     scrollHeight to the viewport and break Lenis / native scroll on long pages */
-  min-height: 100%;
   margin: 0;
   overscroll-behavior: none;
 }

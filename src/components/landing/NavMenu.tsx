@@ -50,7 +50,7 @@ export function NavMenu({ open, onClose, pathname }: NavMenuProps) {
                     onClick={onClose}
                     className={`block border-l-2 py-4 pl-5 text-2xl font-semibold tracking-tight transition-colors ${
                       isActive
-                        ? "border-[#EF3324] text-[#EF3324]"
+                        ? "border-accent text-accent"
                         : "border-transparent text-black hover:border-black hover:text-black"
                     }`}
                   >

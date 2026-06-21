@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { lightPages } from "@/lib/navLinks";
+import { lightPages, backNavPages } from "@/lib/navLinks";
 import { NavMenu } from "@/components/landing/NavMenu";
 
 export function NavBar() {
@@ -22,6 +22,7 @@ export function NavBar() {
   }, [menuOpen]);
 
   const useDarkNav = lightPages.has(pathname);
+  const showBackNav = backNavPages.has(pathname);
 
   return (
     <>
@@ -33,18 +34,45 @@ export function NavBar() {
         }`}
       >
         <div className="flex items-center justify-between px-6 py-4">
-          <Link href="/home" className="flex items-center">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/logo.png"
-              alt="BurgerBots Logo"
-              style={{
-                height: "52px",
-                width: "auto",
-                filter: useDarkNav ? "invert(1)" : "none",
-              }}
-            />
-          </Link>
+          {showBackNav ? (
+            <Link
+              href="/home"
+              aria-label="Back to home"
+              className={`flex h-11 w-11 items-center justify-center transition-colors ${
+                useDarkNav
+                  ? "text-foreground/80 hover:text-foreground"
+                  : "text-white hover:text-white/80"
+              }`}
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden
+              >
+                <path d="M19 12H5" />
+                <path d="M12 19l-7-7 7-7" />
+              </svg>
+            </Link>
+          ) : (
+            <Link href="/home" className="flex items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo.png"
+                alt="BurgerBots Logo"
+                style={{
+                  height: "52px",
+                  width: "auto",
+                  filter: useDarkNav ? "invert(1)" : "none",
+                }}
+              />
+            </Link>
+          )}
 
           <button
             type="button"

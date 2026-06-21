@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { interTight, spaceGrotesk } from "@/fonts";
 import "./globals.css";
-import { GsapSmoothScrollProvider } from "@/components/layout/GsapSmoothScrollProvider";
 
 export const metadata: Metadata = {
   title: "BURGERBOTS",
@@ -16,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${interTight.variable} ${spaceGrotesk.variable} font-sans antialiased`} suppressHydrationWarning>
-        <GsapSmoothScrollProvider>{children}</GsapSmoothScrollProvider>
+        {children}
       </body>
     </html>
   );
