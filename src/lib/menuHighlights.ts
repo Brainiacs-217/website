@@ -5,36 +5,38 @@ export type MenuItem = {
   kicker: string;
   note: string;
   ctaLabel: string;
-  /** Replace with /showcase/menu-{id}.jpg when ready */
   image: string;
 };
 
 export const menuHighlights: MenuItem[] = [
   {
-    id: "classic",
-    name: "The Classic",
-    description: "Ground fresh, grilled to order, dressed by B.O.B. The one that started it all.",
+    id: "burger-and-fries",
+    name: "Burger & Fries",
+    description:
+      "Ground fresh, grilled to order, dressed by Bob. The combo that started it all.",
     kicker: "Signature pick",
-    note: "Fresh-ground beef, melted cheese, and the same build every single time.",
-    ctaLabel: "Try The Classic →",
-    image: "/burger.png",
+    note: "Fresh-ground beef, melted cheese, and a side of thick-cut fries.",
+    ctaLabel: "Try Burger & Fries →",
+    image: "/assets/menu/burger-and-fries.png",
   },
   {
-    id: "double",
-    name: "Double Stack",
-    description: "Two patties, double the robot love. For when one burger isn't enough.",
-    kicker: "Built for hunger",
-    note: "Two patties stacked with the same sub-millimeter care as the original.",
-    ctaLabel: "Go double →",
-    image: "/burger.png",
+    id: "chicken",
+    name: "Chicken Burger",
+    description:
+      "Crispy fried chicken, stacked with lettuce, tomato, and onion — built to spec every time.",
+    kicker: "Crispy classic",
+    note: "Golden crunch on the outside, same precise build on every order.",
+    ctaLabel: "Try Chicken Burger →",
+    image: "/assets/menu/chicken-burger.png",
   },
   {
-    id: "garden",
-    name: "Garden Bot",
-    description: "No patty, all precision. Veggies stacked with the same sub-mm care.",
+    id: "lemongrass-tofu",
+    name: "Lemongrass Tofu Burger",
+    description:
+      "Seared tofu with lemongrass, crisp produce, and the same sub-mm care as everything on the line.",
     kicker: "Plant-based precision",
-    note: "Crisp produce, layered to spec — no shortcuts, no compromise.",
-    ctaLabel: "Try Garden Bot →",
-    image: "/burger.png",
+    note: "Bold lemongrass flavor, layered to spec — no shortcuts, no compromise.",
+    ctaLabel: "Try Lemongrass Tofu →",
+    image: "/assets/menu/lemongrass-tofu-burger.png",
   },
 ];

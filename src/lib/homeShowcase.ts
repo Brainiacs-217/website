@@ -1,9 +1,7 @@
-import { siteConfig } from "@/lib/siteConfig";
-
 export type ShowcaseTile = {
   id: string;
   type: "image" | "video";
-  /** /public path or YouTube embed URL */
+  /** /public path or embed URL */
   src: string;
   alt: string;
   size: "sm" | "md" | "lg" | "wide";
@@ -15,7 +13,7 @@ export const homeShowcaseTiles: ShowcaseTile[] = [
   {
     id: "bob-demo",
     type: "video",
-    src: siteConfig.demoVideoUrl,
+    src: "/assets/burgerbots-live.mov",
     alt: "B.O.B. assembling burgers in the kitchen",
     size: "lg",
     label: "Meet B.O.B.",
@@ -23,7 +21,7 @@ export const homeShowcaseTiles: ShowcaseTile[] = [
   {
     id: "grind",
     type: "image",
-    src: "/technology.png",
+    src: "/assets/flexpicker-burger-assembly.png",
     alt: "BurgerBot technology in the kitchen",
     size: "md",
     label: "Grind. Grill. Garnish.",
@@ -31,15 +29,15 @@ export const homeShowcaseTiles: ShowcaseTile[] = [
   {
     id: "arm",
     type: "image",
-    src: "/robot-arm.png",
-    alt: "Robot assembly arm",
+    src: "/assets/launch-day-kids-robot.png",
+    alt: "Kids watching the BurgerBot in action",
     size: "sm",
   },
   {
     id: "burger",
     type: "image",
-    src: "/burger.png",
-    alt: "Finished burger",
+    src: "/assets/menu/gochujang-aioli-sauces.png",
+    alt: "Gochujang aioli and house sauces on the line",
     size: "sm",
   },
   {
@@ -52,8 +50,8 @@ export const homeShowcaseTiles: ShowcaseTile[] = [
   },
   {
     id: "visit",
-    type: "image",
-    src: "/burger.png",
+    type: "video",
+    src: "/assets/lettuce-tomato-burger-b-roll.mov",
     alt: "Come taste the future",
     size: "md",
     label: "Come taste the future.",
