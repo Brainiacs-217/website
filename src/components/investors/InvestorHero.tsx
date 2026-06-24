@@ -1,5 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
+import { investorDeckCopy } from "@/lib/investorDeck";
 import { NAV_BAR_HEIGHT_PX } from "@/lib/navLinks";
+import { siteConfig } from "@/lib/siteConfig";
 
 export function InvestorHero() {
   return (
@@ -33,6 +36,14 @@ export function InvestorHero() {
           recipes from demonstration and runs assembly at scale without cloud
           dependency.
         </p>
+        <Link
+          href={siteConfig.calendlyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary mt-8 w-fit"
+        >
+          {investorDeckCopy.ctaLabel}
+        </Link>
       </div>
     </section>
   );

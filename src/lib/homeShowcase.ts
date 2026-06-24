@@ -53,6 +53,6 @@ export const homeShowcaseTiles: ShowcaseTile[] = [
     alt: "Come taste the future",
     size: "md",
     label: "Come taste the future.",
-    cta: { label: "Try a Burger →", href: "/contact" },
+    cta: { label: "Try a Burger →", href: "#visit" },
   },
 ];

@@ -51,12 +51,12 @@ export function MenuHighlights() {
             </div>
 
             <div className="mt-2 flex flex-col gap-2 sm:flex-row">
-              <Link
+              <a
                 href="#visit"
                 className="btn-primary-sm flex-1 justify-center sm:text-sm"
               >
                 {item.ctaLabel}
-              </Link>
+              </a>
               <Link
                 href="/buy"
                 className="btn-outline-sm flex-1 justify-center sm:text-sm"

@@ -33,9 +33,9 @@ export function Hero() {
         </p>
 
         <div className="flex flex-wrap items-center gap-3">
-          <Link href="/contact" className="btn-primary">
+          <a href="#visit" className="btn-primary">
             Try a Burger →
-          </Link>
+          </a>
           <Link href="/buy" className="btn-outline">
             Own a BurgerBot
           </Link>

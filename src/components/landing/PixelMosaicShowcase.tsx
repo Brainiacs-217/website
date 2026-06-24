@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { PixelFrame } from "@/components/home/PixelFrame";
 import { VideoEmbed } from "@/components/shared/VideoEmbed";
@@ -39,9 +38,9 @@ function ShowcaseTileContent({ tile }: { tile: ShowcaseTile }) {
 
 function MosaicTile({ tile, index }: { tile: ShowcaseTile; index: number }) {
   const ctaFooter = tile.cta ? (
-    <Link href={tile.cta.href} className="btn-primary">
+    <a href={tile.cta.href} className="btn-primary">
       {tile.cta.label}
-    </Link>
+    </a>
   ) : undefined;
 
   const fillClass = tile.size === "lg" ? "h-full" : "w-full min-w-0";

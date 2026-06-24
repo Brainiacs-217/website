@@ -6,8 +6,6 @@ import {
 } from "@/lib/investorDeck";
 import { siteConfig } from "@/lib/siteConfig";
 
-const deckMailto = `mailto:${siteConfig.investorsEmail}?subject=Investor%20deck%20request`;
-
 export function InvestorCTA() {
   const { eyebrow, title, description, ctaLabel, emailLabel } =
     investorDeckCopy;
@@ -25,7 +23,12 @@ export function InvestorCTA() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <Link href={deckMailto} className="btn-primary">
+            <Link
+              href={siteConfig.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
               {ctaLabel}
             </Link>
             <a

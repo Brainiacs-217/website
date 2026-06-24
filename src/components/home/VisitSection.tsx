@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { PixelFrame } from "@/components/home/PixelFrame";
+import { NAV_BAR_HEIGHT_PX } from "@/lib/navLinks";
 import { siteConfig } from "@/lib/siteConfig";
 
 const { restaurant } = siteConfig;
@@ -11,7 +11,8 @@ export function VisitSection() {
   return (
     <section
       id="visit"
-      className="page-x border-t border-dashed border-text-primary/10 bg-surface-muted py-[calc(var(--spacing-section-md)+0.45in)] scroll-mt-20"
+      className="page-x border-t border-dashed border-text-primary/10 bg-surface-muted py-[calc(var(--spacing-section-md)+0.45in)]"
+      style={{ scrollMarginTop: NAV_BAR_HEIGHT_PX }}
     >
       <div className="mx-auto grid max-w-5xl grid-cols-1 items-start gap-12 md:grid-cols-2 md:items-stretch md:gap-16">
         <FadeIn className="md:h-full">
@@ -55,9 +56,14 @@ export function VisitSection() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <Link href="/contact" className="btn-primary">
+            <a
+              href={restaurant.mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
               Try a Burger →
-            </Link>
+            </a>
             <a
               href={restaurant.mapUrl}
               target="_blank"
