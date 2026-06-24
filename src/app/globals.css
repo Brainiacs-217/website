@@ -210,13 +210,20 @@
   }
 }
 
-html,
-body {
-  margin: 0;
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
   overscroll-behavior: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
+  margin: 0;
   background: var(--color-background);
   color: var(--color-text-primary);
 }

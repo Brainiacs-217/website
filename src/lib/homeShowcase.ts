@@ -24,7 +24,6 @@ export const homeShowcaseTiles: ShowcaseTile[] = [
     src: "/assets/flexpicker-burger-assembly.png",
     alt: "BurgerBot technology in the kitchen",
     size: "md",
-    label: "Grind. Grill. Garnish.",
   },
   {
     id: "arm",
@@ -46,7 +45,6 @@ export const homeShowcaseTiles: ShowcaseTile[] = [
     src: "/burgerbotthumbnail.jpg",
     alt: "Kitchen in action",
     size: "wide",
-    label: "Every burger. Same love.",
   },
   {
     id: "visit",

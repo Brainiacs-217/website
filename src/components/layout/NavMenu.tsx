@@ -30,10 +30,7 @@ export function NavMenu({ open, onClose, pathname }: NavMenuProps) {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div
-          className="flex shrink-0 items-center border-b border-border-default px-8"
-          style={{ height: NAV_BAR_HEIGHT_PX }}
-        >
+        <div className="flex h-[72px] shrink-0 items-center border-b border-border-default px-8">
           <p className="type-eyebrow">Menu</p>
         </div>
 

@@ -7,10 +7,10 @@ import { menuHighlights } from "@/lib/menuHighlights";
 
 const getMenuImageClassName = (id: string) => {
   if (id === "chicken") {
-    return "object-cover object-[center_44%]";
+    return "object-cover object-[center_70%] scale-[1.03]";
   }
   if (id === "lemongrass-tofu") {
-    return "object-cover object-[center_44%]";
+    return "object-cover object-[center_65%]";
   }
   return "object-cover";
 };
@@ -28,7 +28,7 @@ export function MenuHighlights() {
       <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-7">
         {menuHighlights.map((item, i) => (
           <FadeIn key={item.id} delay={i * 0.08} className="flex flex-col gap-5">
-            <PixelFrame label={item.name} labelPosition="overlay">
+            <PixelFrame>
               <div className="relative aspect-[5/4] w-full overflow-hidden">
                 <Image
                   src={item.image}
@@ -39,6 +39,9 @@ export function MenuHighlights() {
                 />
               </div>
             </PixelFrame>
+            <p className="text-sm font-semibold tracking-wide text-text-primary md:text-base">
+              {item.name}
+            </p>
 
             <div className="flex flex-col gap-3 px-0.5">
               <p className="type-eyebrow">{item.kicker}</p>
