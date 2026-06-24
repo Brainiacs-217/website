@@ -21,7 +21,7 @@ export function BobFactCards() {
                 <p className="type-heading-md font-bold leading-none text-text-primary">
                   {fact.value}
                 </p>
-                <p className="text-xs font-medium uppercase tracking-label text-text-secondary">
+                <p className="text-xs font-medium tracking-label text-text-secondary">
                   {fact.label}
                 </p>
               </div>

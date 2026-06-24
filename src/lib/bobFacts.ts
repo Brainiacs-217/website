@@ -7,8 +7,8 @@ export type BobFact = {
 export const bobFacts: BobFact[] = [
   {
     id: "ego",
-    value: "0",
-    label: "ego, infinite precision",
+    value: "Every burger",
+    label: "made with care",
   },
   {
     id: "breaks",
@@ -17,32 +17,32 @@ export const bobFacts: BobFact[] = [
   },
   {
     id: "complaints",
-    value: "0",
-    label: "complaints about the heat",
+    value: "Steady hands",
+    label: "on the grill, every time",
   },
   {
     id: "love",
-    value: "100%",
-    label: "of the grind, every order",
+    value: "Fresh beef",
+    label: "ground for every order",
   },
   {
     id: "hours",
-    value: "24/7",
-    label: "on the line, no days off",
+    value: "Always ready",
+    label: "when you are",
   },
   {
     id: "precision",
-    value: "Sub-mm",
-    label: "every sauce and garnish",
+    value: "Just the right",
+    label: "sauces and toppings",
   },
   {
     id: "consistent",
-    value: "Same",
-    label: "burger, order after order",
+    value: "Same great taste",
+    label: "every visit",
   },
   {
     id: "shortcuts",
-    value: "1",
-    label: "grind, zero shortcuts",
+    value: "Never",
+    label: "cuts corners on quality",
   },
 ];
