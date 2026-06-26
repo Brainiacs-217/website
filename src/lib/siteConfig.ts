@@ -13,5 +13,6 @@ export const siteConfig = {
     mapUrl:
       "https://maps.google.com/?q=160+W+Main+St,+Los+Gatos,+CA+95030",
     visitImage: "/assets/breaking-dawn.png",
+    logo: "/assets/breaking-dawn-mark.png",
   },
 };

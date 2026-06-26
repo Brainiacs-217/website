@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { siteConfig } from "@/lib/siteConfig";
+
+const { restaurant } = siteConfig;
 
 export function Hero() {
   return (
@@ -46,8 +49,15 @@ export function Hero() {
       </div>
 
       <p className="type-eyebrow absolute right-[var(--spacing-page-x)] bottom-[calc(2.5rem+0.25in)] text-right text-[0.875rem]">
-        <span className="block cursor-default underline-offset-[0.2em] transition-[text-decoration] hover:underline">
+        <span className="flex items-center justify-end gap-2 cursor-default underline-offset-[0.2em] transition-[text-decoration] hover:underline">
           Breaking Dawn
+          <Image
+            src={restaurant.logo}
+            alt=""
+            width={20}
+            height={24}
+            className="h-5 w-auto shrink-0"
+          />
         </span>
         <span className="block cursor-default underline-offset-[0.2em] transition-[text-decoration] hover:underline">
           160 W Main St, 95030
